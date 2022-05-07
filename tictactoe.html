@@ -2,17 +2,42 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content=""width=device-width, initial-scale="1.0, user-scalable=no">
-        <title>Tic Tac Toe</title>
+        <title id="title">Tic Tac Toe</title>
 
         <link rel="stylesheet" href="tictactoe.css">
         <script src="tictactoe.js"></script>
     </head>
 
     <body>
-        <h1>Tic Tac Toe </h1>        
-        <hr>
-        <br>
-        <!---3x3-->
-        <div id="board"></div>
+        <div id="container">
+            <header>
+                <h1>TIC TAC TOE</h1>        
+
+            </header>
+            <div class="clearfix"></div>
+            <section id="content">
+                <!---3x3-->
+                <div id="board"></div>
+            </section>
+            <aside>
+                <nav>
+                    <ul>
+                        <li><a href="" class="active">STYLE 1</a></li>
+                        <li><a href="">STYLE 2</a></li>
+                        <li><a href="">STYLE 3</a></li>
+                        <li><a href="">STYLE 4</a></li>
+                    </ul>
+                </nav>
+                <form>
+                    <button type="submit">START</button>
+                </form>
+            </aside>
+            <div class="clearfix"></div>
+            <footer>
+                <ul>
+                    <li id="sublemy"><a href="https://github.com/sublemy" target="_blank">@sublemy</a></li>
+                    <li id="copy">&copy 2022</li>
+            </footer>
+        </div>
     </body>
 </html>

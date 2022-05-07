@@ -1,23 +1,175 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
+    background: linear-gradient(to bottom right, #C668FF, #a459ef, #6d48d2);
+    background-size: 200% 200%;
+    animation: movingGradient 5s infinite alternate;
 }
 
-hr {
-    width: 500px;
-    height: 3px;
-    background-color: black;
+@keyframes movingGradient {
+    from { background-position: 0 0;}
+    to { background-position: 100% 100%;}
+}
+
+#container {
+    /*all*/
+    width: 85%;
+    height: 100%;
+    margin: 0px auto;
+}
+
+header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    text-align: center;
+    height: 10%;
+
+    background: linear-gradient(#b901a7, #7f00b9, #4200b3);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    filter: grayscale(50%);
+    transition: filter 800ms;
+    
+    border-bottom: 4px solid #9200fa;
+}
+
+header:hover{
+    filter: grayscale(25%);
+}
+
+.clearfix{
+    /*won't modify other elements when 'float'*/
+    clear: both;
+}
+
+#content {
+    /*board section*/
+    margin-top: 1%;
+    font-family: Arial, Helvetica, sans-serif;
+    float: left;
+    width: 80%;
+    height: 80%;
 }
 
 #board {
     width: 450px;
     height: 450px;
 
-    background-color: yellow;
+    background-color: #00000000;
 
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+}
+
+aside{
+    /*nav and button*/
+    float: left;
+    width: 20%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+    height: 43%;
+    margin-top: 13%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 210px;
+    background-color: #600b7571;
+}
+  
+nav ul li a {
+    display: block;
+    color: #d7b2f8;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+  
+nav ul li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+nav li a.active {
+    background-color: #d313c3;
+    color: #00fff2;
+}
+  
+nav li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+/*button*/
+button{
+    background-color: #a825bc; color: aqua;
+    border-radius: 12px;
+    padding: 14px 35px;
+    font-size: 30px;
+    transition-duration: 0.4s;
+
+    margin-left: 10%;
+
+    z-index: -1;
+    inset: 0;
+
+    transition: transform 200ms;
+}
+
+button:hover {
+    background-color: #fa0064; 
+    color: white;
+
+    transform: scale(1.05);
+}
+
+footer{
+    /*sublemy :)*/
+    position: sticky;
+    bottom: 0;
+    height: 6%;
+    line-height: 200%;
+    color: white;
+    background: black;   
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer ul li {
+    float: left;
+    list-style: none;
+    margin-left: 28%;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+#sublemy{
+    background-image: linear-gradient(to right, #b526c2, #d4277e);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position-x: right;
+
+    transition: background-size 500ms;
+}
+
+#sublemy:hover{
+    background-size: 100% 100%;
+    background-position: left;
+}
+
+#copy{
+    background: linear-gradient(90deg, #f7a9d2, #c792f3);
+    
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .tile {
@@ -28,6 +180,7 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: aqua;
 }
 
 .horizontal-line {
@@ -40,6 +193,6 @@ hr {
 }
 
 .winner {
-    background-color: rgb(255, 255, 255);
-    color: red;
+    background-color: #a825bcb7;
+    color:#fa0064;
 }
